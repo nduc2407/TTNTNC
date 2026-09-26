@@ -1,19 +1,19 @@
 <!-- #region -->
-# Chapter 2: Intelligent Agents
+# Chương 2: Tác tử thông minh
 
-## Examples
+## Ví dụ
 
-* A simple example agent-environment interaction can be found in the introduction of the exercise [reflex-based agents for the vacuum-cleaner world](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/robot_vacuum.ipynb).
-* [Lunar lander reflex-based agent](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/lunar_lander.ipynb) using the Gymnasium library.
+* Ví dụ đơn giản về tương tác giữa tác tử và môi trường có trong phần giới thiệu của bài tập [tác tử phản xạ cho thế giới máy hút bụi](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/robot_vacuum.ipynb).
+* [Tác tử phản xạ hạ cánh tàu đổ bộ](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/lunar_lander.ipynb) sử dụng thư viện Gymnasium.
 
-## Exercises
+## Bài tập
 
-* [Reflex-based agents for the vacuum-cleaner world](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/robot_vacuum.ipynb)
-* [Gridhunt simple reflex agent](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/gridhunt_mini_assignment.ipynb)
-* [Gridhunt multi-agent environment](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/gridhunt_multiagent_mini_assignment.ipynb)
+* [Tác tử phản xạ cho thế giới máy hút bụi](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/robot_vacuum.ipynb)
+* [Tác tử phản xạ đơn cho Gridhunt](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/gridhunt_mini_assignment.ipynb)
+* [Môi trường đa tác tử Gridhunt](https://colab.research.google.com/github/mhahsler/Introduction_to_Artificial_Intelligence/blob/master/Agents/gridhunt_multiagent_mini_assignment.ipynb)
 
 
-## License
+## Giấy phép
 &copy; 2025-2026 [Michael Hahsler](https://michael.hahsler.net). 
 All code and documents in this repository are provided under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License](https://creativecommons.org/licenses/by-sa/4.0/)
 

@@ -1,0 +1,35 @@
+[MARKDOWN 0]: # Tác tử thông minh: Tác tử phản xạ cho thế giới máy hút bụi |  | Tên sinh viên: Dang Nguyen |  | Tôi đã sử dụng các công cụ AI sau: Antigravity IDE (Gemini) |  | Tôi hiểu rằng bài nộp phải là bài làm của chính mình: DN
+[MARKDOWN 1]: ## Mục tiêu học tập |  | * Thiết kế và xây dựng môi trường mô phỏng các đầu vào cảm biến, tác động của cơ cấu chấp hành và phép đo hiệu quả. | * Áp dụng các khái niệm AI cốt lõi bằng cách cài đặt các hàm tác tử phản xạ đơn và dựa trên mô hình. | * Thực hành cách môi trường và hàm tác tử tương tác. | * Phân tí
+[CODE 2 comments]: # change directory to Google Drive for Google Colab
+[MARKDOWN 3]: Sau khi hoàn thành bài tập và chạy tất cả ô bằng `Runtime/Run all`, có thể chuyển notebook trên Google Drive thành HTML bằng hướng dẫn Colab.
+[MARKDOWN 4]: ## Giới thiệu |  | Trong bài tập này, bạn sẽ cài đặt môi trường mô phỏng cho robot hút bụi tự động, nhiều chương trình tác tử phản xạ và thực hiện nghiên cứu so sánh cho việc làm sạch một căn phòng. Tập trung vào **giai đoạn làm sạch**, bắt đầu khi robot được kích hoạt và kết thúc khi ô bẩn cuối cùng đư
+[MARKDOWN 5]: ## Chương trình tác tử ngẫu nhiên đơn giản |  | Để minh họa cấu trúc chương trình tác tử, ở đây ta cài đặt một tác tử chọn hành động ngẫu nhiên. |  | Hàm tác tử nhận thông tin cảm biến (các nhận thức hiện tại) làm tham số: |  | * `bumpers`: Từ điển boolean cho bốn cảm biến va chạm `north`, `east`, `west`, `sout
+[CODE 6 comments]: # Google Colab or if you are missing a package: Uncomment the %pip command below, run this block, and restart the session. | # %pip install -q "numpy>=1.26,<3"
+[CODE 8 comments]: # define percepts (current location is NW corner and it is dirty) | # call agent program function with percepts and it returns an action
+[MARKDOWN 9]: __Lưu ý:__ Đây chưa phải một tác tử thông minh hợp lý. Nó bỏ qua cảm biến, có thể liên tục va vào tường hoặc không làm sạch ô bẩn. Bạn sẽ cài đặt các tác tử hợp lý hơn bên dưới.
+[MARKDOWN 10]: ## Ví dụ môi trường đơn giản |  | Ta xây dựng một môi trường mô phỏng cung cấp nhận thức cho chương trình tác tử và đánh giá hành động của tác tử. Ví dụ này dùng một căn phòng vô hạn, trong đó các cảm biến va chạm luôn `False` và mọi ô luôn bẩn, kể cả sau khi được làm sạch. Môi trường trả về phép đo hiệ
+[MARKDOWN 12]: Chạy một lần mô phỏng với tác tử ngẫu nhiên và đủ năng lượng cho 20 bước.
+[MARKDOWN 14]: # Nhiệm vụ |  | ## Phần chung [10 điểm] |  | 1. Đảm bảo bạn dùng phiên bản notebook mới nhất. | 2. Có thể dùng các thư viện như `math`, `numpy`, `scipy`, nhưng không dùng thư viện đã cài sẵn tác tử thông minh hoặc thuật toán tìm kiếm hoàn chỉnh. | 3. Notebook cần được định dạng chuyên nghiệp: thêm markdown, chú
+[MARKDOWN 15]: ## Nhiệm vụ 1: Cài đặt môi trường mô phỏng [20 điểm] |  | Môi trường đơn giản ở trên chưa thực tế. Môi trường mới cần: |  | * Khởi tạo trạng thái sạch/bẩn của từng ô. | * Theo dõi vị trí robot. | * Gọi lặp lại hàm tác tử và cung cấp đầu vào cảm biến. | * Phản ứng với hành động của tác tử, chẳng hạn xóa bụi hoặc d
+[CODE 16 comments]:     # Reset internal state if the agent is stateful/model-based |     # Initialize environment grid: 1 = dirty, 0 = clean |     # Place agent at a random square |         # Percept 1: Bumpers (North, South, West, East) |         # Percept 2: Dirt sensor (with optional sensor noise) |         # Call 
+[MARKDOWN 17]: Chứng minh rằng môi trường hoạt động với tác tử ngẫu nhiên ở trên.
+[CODE 18 comments]: # Demonstrate environment with simple_randomized_agent on a 3x3 room
+[MARKDOWN 19]: ## Nhiệm vụ 2: Tác tử phản xạ hợp lý |  | Cài đặt tác tử sử dụng thông tin cảm biến để làm sạch ô hiện tại và di chuyển tránh tường.
+[CODE 20 comments]:     # Filter directions where bumper is False (no wall)
+[MARKDOWN 21]: Chạy môi trường với tác tử phản xạ của bạn.
+[CODE 22 comments]: # Demonstrate simple_reflex_agent on a 3x3 room
+[MARKDOWN 23]: ## Nhiệm vụ 3: Tác tử phản xạ dựa trên mô hình |  | Thêm bộ nhớ trạng thái để tác tử tránh đi lại các ô đã thăm và so sánh hiệu quả với tác tử phản xạ đơn.
+[MARKDOWN 24]: ## Phân tích kết quả |  | Chạy nhiều lần mô phỏng với cùng một môi trường và so sánh số bước trung bình, độ lệch và tỷ lệ hoàn thành. Giải thích ảnh hưởng của xác suất ô bẩn, kích thước phòng, nhiễu cảm biến và ngân sách năng lượng.
+[CODE 25 comments]:         # Rule 1: Always clean dirty squares first |         # Rule 2: Localization to North-West corner (0, 0) |             # Reached NW corner |         # Rule 3: Systematic serpentine sweep
+[MARKDOWN 26]: Hiển thị kết quả mô phỏng.
+[CODE 27 comments]: # Demonstrate model_based_reflex_agent in a 3x3 room
+[MARKDOWN 28]: ## Thí nghiệm với nhiều tác tử |  | So sánh các tác tử trên nhiều cấu hình môi trường.
+[CODE 29 comments]: # 1. Size 5x5 | # 2. Size 10x10 | # 3. Size 100x100 | # For 100x100, random walk cover time is >800,000 steps. | # Using a 20,000 max_steps budget demonstrates timeout/battery exhaustion for memoryless agents.
+[MARKDOWN 30]: ### Kết quả và thảo luận |  | Giải thích tác tử nào hiệu quả nhất, vì sao chiến lược đó phù hợp với PEAS và những hạn chế còn lại.
+[CODE 31 comments]: # Plot 1: Performance comparison on 5x5 and 10x10 | # Plot 2: Log-scale scaling comparison
+[MARKDOWN 32]: ## Nhiễu cảm biến |  | Khảo sát tác động của việc cảm biến bụi đôi khi trả về giá trị bị đảo ngược.
+[MARKDOWN 33]: ## Kết luận |  | Tóm tắt cách mỗi tác tử chọn hành động, kết quả thí nghiệm và đánh đổi giữa việc làm sạch nhanh, tránh tường và sử dụng bộ nhớ.
+[MARKDOWN 34]: ## Câu hỏi mở rộng |  | Đề xuất cách cải thiện tác tử khi phòng lớn hơn, cảm biến không chính xác hơn hoặc pin bị giới hạn.
+[CODE 35 comments]: # Advanced Task: Imperfect Dirt Sensor Experiments & Two-Pass Model-Based Solution |                 # Pass 1: Boustrophedon downwards |                         # Reached SE corner, initiate Pass 2 |                 # Pass 2: Reverse Boustrophedon upwards |         # Check if actually clean
+[MARKDOWN 36]: ## More Advanced Implementation (not for credit) |  | If the assignment was to easy for you then you can think about the following problems. These problems are challenging and not part of this assignment. We will learn implementation strategies and algorithms useful for these tasks during the rest of th
+[CODE 37 comments]: # Summary of ideas for handling obstacles and utility-based cleaning: | # 1. Obstacles: Build an internal occupancy grid map (0=clean, 1=dirty, -1=obstacle, ?=unvisited). | #    Use frontier exploration / A* path planning to navigate around obstacles to the nearest uncleaned square. | # 2. Re-soilin
