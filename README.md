@@ -41,3 +41,6 @@ Theo dõi trạng thái hoàn thành các bài tập của từng thành viên:
 - Trình bày lời giải rõ ràng, giải thích thuật toán và phương pháp thực hiện.
 - Kiểm tra tính chính xác của kết quả trước khi nộp.
 - Thống nhất định dạng và rà soát toàn bộ nội dung trước khi nộp bài chính thức.
+
+## 5. Link GG Docs:
+[here](https://docs.google.com/document/d/1y_--ke1F7BeF5gGxS9xVGOwJ5JPH96hVgVd0735jWB8/edit?usp=sharing)
